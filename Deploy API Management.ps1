@@ -15,7 +15,7 @@ $EMAIL="noreply@temenos.com"
 
 #Create the API Management instance
 Write-Host "Creating resource group"
-New-AzureRmResourceGroup -Name $RGNAME -Location $REGION -Confirm:$false
+New-AzureRmResourceGroup -Name $RGNAME -Location $REGION -Force
 Write-Host "Creating API Management instance"
 New-AzureRmApiManagement -ResourceGroupName $RGNAME -Location $REGION -Name $APIMNAME -Organization $ORGANIZATIONNAME -AdminEmail $EMAIL -Sku "Developer"
 
