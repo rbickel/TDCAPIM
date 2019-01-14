@@ -17,4 +17,39 @@ You need a clean API Management setup, with OpenID Connect provider configured. 
     & './TDCAPIM/Deploy API Management.ps1'
     ```
 
+## API Policies
 
+    ```xml
+    <policies>
+        <inbound>
+            <base />
+            <validate-jwt 
+                header-name="Authorization" 
+                failed-validation-httpcode="401" 
+                failed-validation-error-message="Unauthorized" 
+                require-expiration-time="true" 
+                require-scheme="Bearer" 
+                require-signed-tokens="true" 
+                clock-skew="0">
+                <openid-config url="{{OIDCProviderConfig}}" />
+            </validate-jwt>
+            <cache-lookup 
+                vary-by-developer="false" 
+                vary-by-developer-groups="false" 
+                allow-private-response-caching="true" downstream-caching-type="none">
+                <vary-by-header>Accept</vary-by-header>
+            </cache-lookup>
+        </inbound>
+        <backend>
+            <base />
+        </backend>
+        <outbound>
+            <base />
+            <xml-to-json kind="direct" apply="always" consider-accept-header="true" />
+            <cache-store duration="3600" />
+        </outbound>
+        <on-error>
+            <base />
+        </on-error>
+    </policies>
+    ```
