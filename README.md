@@ -17,6 +17,10 @@ You need a clean API Management setup, with OpenID Connect provider configured. 
     & './TDCAPIM/Deploy API Management.ps1'
     ```
 
+##n Calc API Import
+
+Import calc API `http://calcapi.cloudapp.net/calcapi.json` following the official documentation: [Import and publish your API](https://docs.microsoft.com/en-us/azure/api-management/import-and-publish)
+
 ## API Policies
 
 ```xml

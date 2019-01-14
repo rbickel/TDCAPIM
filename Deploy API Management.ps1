@@ -1,6 +1,6 @@
 ## From shell.azure.com
 ## Using Powershell environment
-## Create AKS cluster
+## Create API Management instance
 
 if(!$args[0]){
     Write-Host "API Management name as the first parameter"
