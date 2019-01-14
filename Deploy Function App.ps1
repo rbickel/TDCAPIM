@@ -21,5 +21,5 @@ $password = $creds.Properties.PublishingPassword
 $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $username,$password)))
 
 $apiUrl = "https://$APPNAME.scm.azurewebsites.net/api/zip/site/wwwroot"
-$filePath = "Functions.zip"
+$filePath = "Functions/Package.zip"
 Invoke-RestMethod -Uri $apiUrl -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)} -Method PUT -InFile $filePath -ContentType "multipart/form-data"
