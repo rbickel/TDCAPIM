@@ -17,20 +17,24 @@ You need a clean API Management setup, with OpenID Connect provider configured. 
     #Ensure to update MYAPIMNAME with a unique name
     & './TDCAPIM/Deploy API Management.ps1' MYAPIMNAME
     ```
-> The value of `MYAPIMNAME` must be unique globally
+> The value of `MYAPIMNAME` must be globally unique
 
 ## 2. Import Calc API
 
 Import calc API `http://calcapi.cloudapp.net/calcapi.json` following the official documentation: [Import and publish your API](https://docs.microsoft.com/en-us/azure/api-management/import-and-publish)
 
 ## 3. Enable Authentication
-1. Select the API and go to the **Settings tab**
-2. Under **Security**, select OpenID Connect provider for `Authorization`
-3. Save your changes
+1. Go to `portal.azure.com`
+2. Select your API Management instance
+3. Select the API and go to the **Settings tab**
+4. Under **Security**, select OpenID Connect provider for `Authorization`
+5. Save your changes
 
-## 3. API Policies for caching, json to xml and authorization
-1. Select the API and go to the **Design tab**
-2. Edit the policies and replace by the following xml
+## 4. API Policies for caching, json to xml and authorization
+1. Go to `portal.azure.com`
+2. Select your API Management instance
+3. Select the API and go to the **Design tab**
+4. Edit the policies and replace by the following xml
     ```xml
     <policies>
         <inbound>
@@ -66,7 +70,7 @@ Import calc API `http://calcapi.cloudapp.net/calcapi.json` following the officia
     </policies>
     ```
 
-## 4. Deploy Function App and Functions
+## 5. Deploy Function App and Functions
 
 1. Go to `shell.azure.com`
 2. Switch the environment to `Powershell`
@@ -78,10 +82,10 @@ Import calc API `http://calcapi.cloudapp.net/calcapi.json` following the officia
     #Ensure to update MYAPPNAME with a unique name. MYAPPNAME is also used for the storage account
     & './Deploy Function App.ps1' MYAPPNAME
     ```
-> The value of `MYAPPNAME` must be unique globally. As it is used for the storage account, it must follow the stoage account naming restrictions.
+> The value of `MYAPPNAME` must be globally unique. As it is used for the storage account, it must follow the stoage account naming restrictions.
 
 
-## 5. Extend the API Management APIs with Functions
+## 6. Extend the API Management APIs with Functions
 1. Go to `portal.azure.com`
 2. Select your `API Management` instance
 3. Under `APIs`, select `...` next to your API > *Import* > *Function App*
