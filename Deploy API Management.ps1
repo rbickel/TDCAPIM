@@ -27,7 +27,7 @@ $CLIENTSECRET="TDC2019Secret!"
 $REDIRECTURL1="https://$APIMNAME.portal.azure-api.net/docs/services/$APPNAME/console/openidconnect/implicit/callback"
 $REDIRECTURL2="https://$APIMNAME.portal.azure-api.net/docs/services/$APPNAME/console/openidconnect/authorizationcode/callback"
 
-az ad app create --display-name $APPNAME --oauth2-allow-implicit-flow true --password "$CLIENTSECRET" --identifier-uris "$IDURI" --reply-urls "$REDIRECTURL1" "$REDIRECTURL2" --required-resource-accesses "@manifest.json" 
+az ad app create --display-name "$APPNAME" --oauth2-allow-implicit-flow true --password "$CLIENTSECRET" --identifier-uris "$IDURI" --reply-urls "$REDIRECTURL1" "$REDIRECTURL2" --required-resource-accesses "@manifest.json" 
 
 #Configure OIDC provicer in API Management
 Write-Host "Configure OIDC provider in API Management"

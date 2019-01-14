@@ -18,6 +18,7 @@ You need a clean API Management setup, with OpenID Connect provider configured. 
     & './TDCAPIM/Deploy API Management.ps1' MYAPIMNAME
     ```
 > The value of `MYAPIMNAME` must be globally unique
+> API Management population can take up to 45 minutes. If the shell disconnect during the process, just wait the provisionning is completed (from `portal.azure.com`), and the reconnect to the shell and re-execute the script
 
 ## 2. Import Calc API
 
