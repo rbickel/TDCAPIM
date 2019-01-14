@@ -66,7 +66,7 @@ Import calc API `http://calcapi.cloudapp.net/calcapi.json` following the officia
     </policies>
     ```
 
-## Deploy Function App and Functions
+## 4. Deploy Function App and Functions
 
 1. Go to `shell.azure.com`
 2. Switch the environment to `Powershell`
@@ -81,8 +81,8 @@ Import calc API `http://calcapi.cloudapp.net/calcapi.json` following the officia
 > The value of `MYAPPNAME` must be unique globally. As it is used for the storage account, it must follow the stoage account naming restrictions.
 
 
-## Extend the API Management APIs with Functions
+## 5. Extend the API Management APIs with Functions
 1. Go to `portal.azure.com`
 2. Select your `API Management` instance
 3. Under `APIs`, select `...` next to your API > *Import* > *Function App*
-4. Select the functions you want to import and click *Ok*
+4. Select the functions you want to import and click *Ok*§
