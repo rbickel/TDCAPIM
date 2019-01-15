@@ -8,7 +8,7 @@ if(!$args[0]){
 }
 
 $APIMNAME=$args[0]
-$RGNAME="tdc2019-rg"
+$RGNAME="tdc2019apim-rg"
 $REGION="westeurope"
 $ORGANIZATIONNAME="TDC2019"
 $EMAIL="noreply@temenos.com"
