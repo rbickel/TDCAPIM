@@ -3,7 +3,7 @@
 ## Create Function App
 
 if(!$args[0]){
-    Write-Host "API Management name as the first parameter"
+    Write-Host "Storage and Function name as the first parameter"
     Exit
 }
 
