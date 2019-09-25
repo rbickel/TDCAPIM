@@ -8,7 +8,7 @@ if(!$args[0]){
 }
 
 $APPNAME=$args[0]
-$RGNAME="tdc2019apim-rg"
+$RGNAME="apim-rg"
 $REGION="westeurope"
 
 #create the resource group
