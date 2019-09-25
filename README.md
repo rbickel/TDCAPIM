@@ -1,9 +1,9 @@
-# TDCAPIM
-Temenos Developer Conference: Azure API Management presentation
+# Azure API Management workshop
+Azure API Management presentation and demo
 
 # Demo API Management
 
-![TDC 2019 API Management demo](https://raw.githubusercontent.com/rbickel/TDCAPIM/master/Medias/APIManagement%20Demo.png)
+![API Management demo](https://raw.githubusercontent.com/rbickel/TDCAPIM/master/Medias/APIManagement%20Demo.png)
 
 ## 1. Initial Setup
 You need a clean API Management setup, with OpenID Connect provider configured. You can use the following script to do the setup:
