@@ -8,10 +8,10 @@ if(!$args[0]){
 }
 
 $APIMNAME=$args[0]
-$RGNAME="tdc2019apim-rg"
+$RGNAME="apim-rg"
 $REGION="westeurope"
-$ORGANIZATIONNAME="TDC2019"
-$EMAIL="noreply@temenos.com"
+$ORGANIZATIONNAME="APIM"
+$EMAIL="noreply@apimanagement.com"
 
 #Create the API Management instance
 Write-Host "Creating resource group"
@@ -23,7 +23,7 @@ New-AzureRmApiManagement -ResourceGroupName $RGNAME -Location $REGION -Name $API
 Write-Host "Creating App Registration in Azure AD"
 $APPNAME="$APIMNAME-app"
 $IDURI="http://localhost/$APPNAME"
-$CLIENTSECRET="TDC2019Secret!"
+$CLIENTSECRET="APIM2019Secret!"
 $REDIRECTURL1="https://$APIMNAME.portal.azure-api.net/docs/services/$APPNAME/console/openidconnect/implicit/callback"
 $REDIRECTURL2="https://$APIMNAME.portal.azure-api.net/docs/services/$APPNAME/console/openidconnect/authorizationcode/callback"
 
